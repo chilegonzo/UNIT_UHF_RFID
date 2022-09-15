@@ -17,7 +17,7 @@ How to use:
 */
 
 #include <M5GFX.h>
-#include <M5Stack.h>
+#include <M5Core2.h>
 
 #include "UNIT_UHF_RFID.h"
 
@@ -32,7 +32,7 @@ void setup() {
     // Serial2.begin(unsigned long baud, uint32_t config, int8_t rxPin, int8_t
     // txPin, bool invert) uhf.begin(HardwareSerial *serial = &Serial2, int
     // baud=115200, uint8_t RX = 16, uint8_t TX = 17, bool debug = false);
-    uhf.begin(&Serial2, 115200, 16, 17, false);
+    uhf.begin(&Serial2, 115200, 33, 32, false);
     //   uhf.begin();
     while (1) {
         info = uhf.getVersion();
